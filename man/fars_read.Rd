@@ -17,5 +17,7 @@ This function accepts a filename and reads FARS file (csv format) and creates da
 The function checks if the file exists and prints error msg when it doesn't.
 }
 \examples{
+\dontrun{
 fars_read(make_filename(2013))
+}
 }

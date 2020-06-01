@@ -1,3 +1,5 @@
+utils::globalVariables(c('STATE','MONTH','year','n'))
+
 #' fars_read(): Reads FARS (Fatality Analysis Reporting System) Data
 #'
 #' This function accepts a filename and reads FARS file (csv format) and creates dataframe table.
@@ -12,7 +14,9 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' fars_read(make_filename(2013))
+#' }
 fars_read <- function(filename) {
         if(!file.exists(filename))
                 stop("file '", filename, "' does not exist")
@@ -49,8 +53,8 @@ make_filename <- function(year) {
 #' @param years An year of interest in which data to be read (2013-2015)
 #'
 #' @return A list of MONTH and year from the accidents dataset of given year
-#' @importFrom dplyr select
 #' @importFrom dplyr mutate
+#' @importFrom dplyr select
 #' @importFrom dplyr %>%
 #' @export
 #'

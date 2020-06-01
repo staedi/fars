@@ -25,6 +25,5 @@ Otherwise, accidents data is to be mapped within the state geography.
 \examples{
 \dontrun{
 fars_map_state(1,2013)
-fars_map_state(60,2013)
 }
 }

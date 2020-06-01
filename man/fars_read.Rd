@@ -17,7 +17,5 @@ This function accepts a filename and reads FARS file (csv format) and creates da
 The function checks if the file exists and prints error msg when it doesn't.
 }
 \examples{
-fars_read('accident_2013.csv.bz2')
 fars_read(make_filename(2013))
-fars_read('accident_2019.csv.bz2')
 }

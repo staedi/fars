@@ -18,5 +18,4 @@ This result will be read into fars_read()
 }
 \examples{
 make_filename(2013)
-make_filename(2019)
 }

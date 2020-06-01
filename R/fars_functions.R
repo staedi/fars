@@ -6,6 +6,9 @@
 #' @param filename String type file name provided to be read into dataframe table
 #'
 #' @return This function returns a dplyr::tbl_df class object.
+#'
+#' @importFrom readr read_csv
+#' @importFrom dplyr tbl_df
 #' @export
 #'
 #' @examples
@@ -46,6 +49,8 @@ make_filename <- function(year) {
 #' @param years An year of interest in which data to be read (2013-2015)
 #'
 #' @return A list of MONTH and year from the accidents dataset of given year
+#' @importFrom dplyr select
+#' @importFrom dplyr mutate
 #' @importFrom magrittr %>%
 #' @export
 #'
@@ -75,6 +80,10 @@ fars_read_years <- function(years) {
 #' @param years An year of interest in which data to be read (2013-2015)
 #'
 #' @return A data table summarizing the number of accidents per month
+#' @importFrom dplyr bind_rows
+#' @importFrom dplyr group_by
+#' @importFrom dplyr summarize
+#' @importFrom tidyr spread
 #' @importFrom magrittr %>%
 #' @export
 #'
@@ -103,7 +112,9 @@ fars_summarize_years <- function(years) {
 #' @param year An year of interest in which data to be read (2013-2015)
 #'
 #' @return Displays a plot of state map with accidents data. If there's no accidents in the state, 'no accidents to plot' is printed instead.
-#
+#' @importFrom dplyr filter
+#' @importFrom maps map
+#' @importFrom graphics points
 #' @export
 #'
 #' @examples

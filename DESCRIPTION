@@ -2,7 +2,7 @@ Package: fars
 Type: Package
 Title: Fatality Analysis Reporting System (FARS) Project
 Version: 0.1.0
-Imports: dplyr, magrittr
+Imports: readr, dplyr, tidyr, magrittr, maps, graphics
 Author: Min Park
 Maintainer: Min Park <staedi@gmail.com>
 Description: This package has functions to read csv file about Fatality Analysis Reporting System(FARS) data and process them.

@@ -51,7 +51,7 @@ make_filename <- function(year) {
 #' @return A list of MONTH and year from the accidents dataset of given year
 #' @importFrom dplyr select
 #' @importFrom dplyr mutate
-#' @importFrom magrittr %>%
+#' @importFrom dplyr %>%
 #' @export
 #'
 #' @examples
@@ -84,7 +84,7 @@ fars_read_years <- function(years) {
 #' @importFrom dplyr group_by
 #' @importFrom dplyr summarize
 #' @importFrom tidyr spread
-#' @importFrom magrittr %>%
+#' @importFrom dplyr %>%
 #' @export
 #'
 #' @examples

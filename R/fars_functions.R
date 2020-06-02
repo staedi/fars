@@ -89,6 +89,7 @@ fars_read_years <- function(years) {
 #' @importFrom dplyr bind_rows
 #' @importFrom dplyr group_by
 #' @importFrom dplyr summarize
+#' @importFrom dplyr n
 #' @importFrom tidyr spread
 #' @importFrom dplyr %>%
 #' @export
@@ -101,7 +102,7 @@ fars_summarize_years <- function(years) {
         dat_list <- fars_read_years(years)
         dplyr::bind_rows(dat_list) %>%
                 dplyr::group_by(year, MONTH) %>%
-                dplyr::summarize(n = n()) %>%
+                dplyr::summarize(n = dplyr::n()) %>%
                 tidyr::spread(year, n)
 }
 

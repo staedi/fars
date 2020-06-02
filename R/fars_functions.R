@@ -1,4 +1,4 @@
-utils::globalVariables(c('STATE','MONTH','year','n'))
+utils::globalVariables(c("."))
 
 #' fars_read(): Reads FARS (Fatality Analysis Reporting System) Data
 #'
@@ -53,6 +53,7 @@ make_filename <- function(year) {
 #' @param years An year of interest in which data to be read (2013-2015)
 #'
 #' @return A list of MONTH and year from the accidents dataset of given year
+#'
 #' @importFrom dplyr mutate
 #' @importFrom dplyr select
 #' @importFrom dplyr %>%
@@ -60,7 +61,7 @@ make_filename <- function(year) {
 #'
 #' @examples
 #' \dontrun{
-#' fars_read_years(2013)
+#' fars_read_years(c(2013,2014,2015))
 #' }
 fars_read_years <- function(years) {
         lapply(years, function(year) {
@@ -84,6 +85,7 @@ fars_read_years <- function(years) {
 #' @param years An year of interest in which data to be read (2013-2015)
 #'
 #' @return A data table summarizing the number of accidents per month
+#'
 #' @importFrom dplyr bind_rows
 #' @importFrom dplyr group_by
 #' @importFrom dplyr summarize
@@ -93,7 +95,7 @@ fars_read_years <- function(years) {
 #'
 #' @examples
 #' \dontrun{
-#' fars_summarize_years(2013)
+#' fars_summarize_years(c(2013,2014))
 #' }
 fars_summarize_years <- function(years) {
         dat_list <- fars_read_years(years)

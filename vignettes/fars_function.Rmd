@@ -27,7 +27,7 @@ library(fars)
 The function `fars_read_years` reads data of specific year and return tibbles for vectors of that year. This function uses related helper functions including fars_read and make_filename.
 
 ```{r read_data}
-fars_read_years(2013)
+fars_read_years(c(2013,2014))
 ```
 
 ## Summarize monthly fatalities
@@ -35,7 +35,7 @@ fars_read_years(2013)
 The function `fars_summarize_years` shows fatalities for given year summarized by month.
 
 ```{r summarize_data}
-fars_summarize_years(2013)
+fars_summarize_years(c(2013,2014))
 ```
 
 ## Plot on the map

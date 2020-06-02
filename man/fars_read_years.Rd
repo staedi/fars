@@ -19,6 +19,6 @@ Otherwise, that file of accidents will be read and a list with only MONTH and ye
 }
 \examples{
 \dontrun{
-fars_read_years(2013)
+fars_read_years(c(2013,2014,2015))
 }
 }

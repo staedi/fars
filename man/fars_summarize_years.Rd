@@ -18,6 +18,6 @@ Afterwards, summary of accidents per month of given year will be displayed
 }
 \examples{
 \dontrun{
-fars_summarize_years(2013)
+fars_summarize_years(c(2013,2014))
 }
 }

@@ -1,4 +1,4 @@
-utils::globalVariables(c("."))
+utils::globalVariables(c("MONTH","STATE","year"))
 
 #' fars_read(): Reads FARS (Fatality Analysis Reporting System) Data
 #'
